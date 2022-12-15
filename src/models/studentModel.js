@@ -1,26 +1,26 @@
-const { Schema, default: mongoose } = require("mongoose");
+const mongoose = require("mongoose")
 
-const studentSchema = new Schema({
-    first_name: {
-        type: String,
-        required: true
+const studentSchema = new mongoose.Schema({
+    name : {
+        type : String,
+        required : true
     },
-
-    last_name: {
-        type: String,
-        required: true
+    subject : {
+        type : String,
+        required : true
     },
-
-    marks: { type: Number, required: true },
-    
-    user_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+    marks : {
+        type : Number,
+        required : true
     },
-
-    isDeleted: {
-        type: Boolean,
-        default: false
+    userId : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "User",
+        required : true
+    },
+    isDeleted : {
+        type : Boolean,
+        default : false
     }
 })
 
