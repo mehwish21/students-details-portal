@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const userController = require('../controllers/user')
 const StudentController = require("../controllers/student")
-const {auth} = require("../middlewares/auth")
+const auth = require("../middleware/auth")
 
 
 router.post('/register', userController.register)
@@ -18,3 +18,4 @@ router.all("/*", function (req, res) {
     res.status(404).send({status: false,message: "Make Sure Your Endpoint is Correct !!!"})
 })
 module.exports = router
+

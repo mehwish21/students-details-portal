@@ -1,5 +1,5 @@
 const StudentModel = require("../models/studentModel")
-const {isValid, isValidbody, nameRegex} = require("../validator/validator")
+const {isValid, isValidbody, nameRegex} = require("../validators/validator")
 
 const addStudent = async function(req, res) {
     try {
